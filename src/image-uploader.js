@@ -21,7 +21,9 @@
         let plugin = this;
 
         // Will keep the files
-        let dataTransfer = new DataTransfer();
+        let dataTransfer = {};
+        dataTransfer.files = []
+        dataTransfer.items = []
 
         // The file input
         let $input;
