@@ -198,7 +198,7 @@
                     });
 
                     // Remove the file from input
-                    dataTransfer.items.remove(index);
+                    dataTransfer.items.splice(index, 1)
 
                     // Update input files
                     $input.prop('files', dataTransfer.files);
@@ -341,7 +341,7 @@
             $(files).each(function (i, file) {
 
                 // Add it to data transfer
-                dataTransfer.items.add(file);
+                dataTransfer.items.push(file);
 
                 // Set preview
                 $uploadedContainer.append(createImg(URL.createObjectURL(file), dataTransfer.items.length - 1), false);
