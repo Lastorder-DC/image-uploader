@@ -199,6 +199,7 @@
 
                     // Remove the file from input
                     dataTransfer.items.splice(index, 1)
+                    dataTransfer.files.splice(index, 1)
 
                     // Update input files
                     $input.prop('files', dataTransfer.files);
@@ -342,6 +343,7 @@
 
                 // Add it to data transfer
                 dataTransfer.items.push(file);
+                dataTransfer.files.push(file.getAsFile());
 
                 // Set preview
                 $uploadedContainer.append(createImg(URL.createObjectURL(file), dataTransfer.items.length - 1), false);
