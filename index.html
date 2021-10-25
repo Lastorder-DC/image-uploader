@@ -643,7 +643,7 @@ $('.input-images-2').imageUploader({
 
             // Get the new files names
             let $fileNames = $('<ul>');
-            for (let file of $inputImages.prop('files')) {
+            for (var file of $inputImages.prop('files')) {
                 $('<li>', {text: file.name}).appendTo($fileNames);
             }
 
@@ -656,7 +656,7 @@ $('.input-images-2').imageUploader({
 
                 // Get the ids
                 let $preloadedIds = $('<ul>');
-                for (let iP of $inputPreloaded) {
+                for (var iP of $inputPreloaded) {
                     $('<li>', {text: '#' + iP.value}).appendTo($preloadedIds);
                 }
 
