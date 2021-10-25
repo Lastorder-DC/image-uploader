@@ -292,7 +292,7 @@
         let validateMIME = function (file) {
 
             if (plugin.settings.mimes.indexOf(file.type) < 0) {
-                alert('The file ' + file.name + ' does not match with the accepted mime types: ' + plugin.settings.mimes.join('", "')});
+                alert('The file ' + file.name + ' does not match with the accepted mime types: ' + plugin.settings.mimes.join('", "'));
 
                 return false;
             }
