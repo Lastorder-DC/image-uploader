@@ -281,7 +281,7 @@
         let validateExtension = function (file) {
 
             if (plugin.settings.extensions.indexOf(file.name.replace(new RegExp('^.*\\.'), '.')) < 0) {
-                alert(`The file "${file.name}" does not match with the accepted file extensions: "${plugin.settings.extensions.join('", "')}"`);
+                alert('The file ' + file.name + ' does not match with the accepted file extensions: ' + plugin.settings.extensions.join('", "'));
 
                 return false;
             }
@@ -292,7 +292,7 @@
         let validateMIME = function (file) {
 
             if (plugin.settings.mimes.indexOf(file.type) < 0) {
-                alert(`The file "${file.name}" does not match with the accepted mime types: "${plugin.settings.mimes.join('", "')}"`);
+                alert('The file ' + file.name + ' does not match with the accepted mime types: ' + plugin.settings.mimes.join('", "')});
 
                 return false;
             }
@@ -303,7 +303,7 @@
         let validateMaxSize = function (file) {
 
             if (file.size > plugin.settings.maxSize) {
-                alert(`The file "${file.name}" exceeds the maximum size of ${plugin.settings.maxSize / 1024 / 1024}Mb`);
+                alert('The file ' + file.name + ' exceeds the maximum size of ' + plugin.settings.maxSize / 1024 / 1024 + 'Mb');
 
                 return false;
             }
@@ -315,7 +315,7 @@
         let validateMaxFiles = function (index, file) {
 
             if ((index + dataTransfer.items.length + plugin.settings.preloaded.length) >= plugin.settings.maxFiles) {
-                alert(`The file "${file.name}" could not be added because the limit of ${plugin.settings.maxFiles} files was reached`);
+                alert('The file ' + file.name + ' could not be added because the limit of ' + plugin.settings.maxFiles + 'files was reached');
 
                 return false;
             }
